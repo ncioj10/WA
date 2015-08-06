@@ -11,7 +11,7 @@ packageInfo:
   forced-package-id: '127'
 versionInfo:
   versionCode: '450550'
-  versionName: 2.12.166
+  versionName: 2.12.222
 compressionType: false
 unknownFiles:
   LICENSE.txt: '8'
