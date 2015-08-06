@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:whatsapp="http://schemas.android.com/apk/res-auto" xmlns:fab="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/call_notification" android:background="@drawable/call_duration_bar_background" android:paddingLeft="16.0dip" android:paddingTop="8.0dip" android:paddingRight="16.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="17.0sp" android:textColor="@android:color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tap_to_return_to_call" android:layout_toLeftOf="@id/call_notification_timer" android:layout_alignParentLeft="true" />
+        <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:gravity="center_vertical" android:id="@id/call_notification_timer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:textAllCaps="true" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/pager_holder" android:paddingTop="@dimen/tab_height" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <view android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.whatsapp.HomeActivity$TabsPager" />
+        </FrameLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/header" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/toolbar" />
+            <com.whatsapp.PagerSlidingTabStrip android:id="@id/tabs" android:background="@color/primary" android:layout_width="fill_parent" android:layout_height="@dimen/tab_height" fab:pstsIndicatorColor="@color/tab_indicator" fab:pstsDividerColor="@android:color/transparent" fab:pstsIndicatorHeight="3.0dip" fab:pstsUnderlineHeight="1.0dip" fab:pstsTabPaddingLeftRight="12.0dip" fab:pstsShouldExpand="true" />
+        </LinearLayout>
+        <FrameLayout android:orientation="horizontal" android:id="@id/search_holder" android:background="@drawable/search_background" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/abc_action_bar_default_height_material" android:elevation="@dimen/actionbar_elevation">
+            <ImageView android:layout_gravity="center|left" android:id="@id/search_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_back_teal" style="?attr/actionButtonStyle" />
+            <android.support.v7.widget.SearchView android:layout_gravity="center_vertical" android:id="@id/search_view" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.AppCompat.SearchView.ActionBar" />
+        </FrameLayout>
+    </FrameLayout>
+    <com.getbase.floatingactionbutton.FloatingActionsMenu android:id="@id/FAB" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:layout_marginBottom="16.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:layout_marginEnd="16.0dip" android:layout_alignParentEnd="true" fab:fab_colorPressed="#ffffffff" fab:fab_colorNormal="#ffffffff" fab:fab_addButtonColorPressed="#ff666666" fab:fab_addButtonColorNormal="#ff555555" fab:fab_addButtonPlusIconColor="@color/white" fab:fab_labelStyle="@style/menu_labels_style">
+        <com.getbase.floatingactionbutton.FloatingActionButton android:id="@id/FAB_A" android:layout_width="wrap_content" android:layout_height="wrap_content" fab:fab_colorPressed="#ffffffff" fab:fab_colorNormal="#ffeeeeee" fab:fab_icon="@drawable/whatsappmd_fab_newchat" fab:fab_size="mini" />
+        <com.getbase.floatingactionbutton.FloatingActionButton android:id="@id/FAB_B" android:layout_width="wrap_content" android:layout_height="wrap_content" fab:fab_colorPressed="#ffffffff" fab:fab_colorNormal="#ffeeeeee" fab:fab_icon="@drawable/whatsappmd_fab_newgroup" fab:fab_size="mini" />
+        <com.getbase.floatingactionbutton.FloatingActionButton android:id="@id/FAB_C" android:layout_width="wrap_content" android:layout_height="wrap_content" fab:fab_colorPressed="#ffffffff" fab:fab_colorNormal="#ffeeeeee" fab:fab_icon="@drawable/whatsappmd_fab_broadcast" fab:fab_size="mini" />
+        <com.getbase.floatingactionbutton.FloatingActionButton android:id="@id/FAB_D" android:layout_width="wrap_content" android:layout_height="wrap_content" fab:fab_colorPressed="#ffffffff" fab:fab_colorNormal="#ffeeeeee" fab:fab_icon="@drawable/whatsappmd_fab_search" fab:fab_size="mini" />
+        <com.getbase.floatingactionbutton.FloatingActionButton android:id="@id/FAB_E" android:layout_width="wrap_content" android:layout_height="wrap_content" fab:fab_colorPressed="#ffffffff" fab:fab_colorNormal="#ffeeeeee" fab:fab_icon="@drawable/whatsappmd_fab_wamdsettings" fab:fab_size="mini" />
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+</RelativeLayout>

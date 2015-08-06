@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="General" android:key="colors_section">
+        <Preference android:icon="@null" android:title="Status bar color" android:key="colors_statusbar" android:summary="\#FFFFFF" />
+        <Preference android:icon="@null" android:title="Action bar color" android:key="colors_actionbar" android:summary="\#FFFFFF" />
+        <Preference android:icon="@null" android:title="Navigation bar color" android:key="colors_navbar" android:summary="\#FFFFFF" />
+        <Preference android:icon="@null" android:title="Home tabs" android:key="colors_hometabs" android:summary="\#FFFFFF" />
+        <tk.brianvalente.whatsappmd.SwitchPref android:icon="@null" android:title="Dark mode" android:key="general_darkmode" android:summary="The UI gets darker" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Home" android:key="home_section">
+        <tk.brianvalente.whatsappmd.SwitchPref android:icon="@null" android:title="Action Bar + Home Tabs" android:key="actionBarPlusHomeTab" android:summary="Use the same color for both" android:defaultValue="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Floating Action Button">
+        <tk.brianvalente.whatsappmd.SwitchPref android:icon="@null" android:title="Floating Action Button" android:key="fabEnabled" android:summary="Enables the FAB" android:defaultValue="true" />
+        <Preference android:icon="@null" android:title="Select FAB buttons" android:key="fab_settings" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Conversation" android:key="conversation_section">
+        <tk.brianvalente.whatsappmd.SwitchPref android:icon="@null" android:title="Hide contact photo" android:key="conversationNoContactPhoto" android:summary="Hides the contact photo from the Action Bar" android:defaultValue="false" />
+        <Preference android:icon="@null" android:title="Right bubble color" android:key="conversation_RightBubbleColor" android:summary="\#FFFFFF" />
+        <Preference android:icon="@null" android:title="Right bubble text color" android:key="conversation_RightBubbleTextColor" android:summary="\#FFFFFF" />
+        <Preference android:icon="@null" android:title="Right bubble date color" android:key="conversation_RightBubbleDateColor" android:summary="\#FFFFFF" />
+        <Preference android:icon="@null" android:title="Left bubble color" android:key="conversation_LeftBubbleColor" android:summary="\#FFFFFF" />
+        <Preference android:icon="@null" android:title="Left bubble text color" android:key="conversation_LeftBubbleTextColor" android:summary="\#FFFFFF" />
+        <Preference android:icon="@null" android:title="Left bubble date color" android:key="conversation_LeftBubbleDateColor" android:summary="\#FFFFFF" />
+        <Preference android:icon="@null" android:title="Participant name color" android:key="conversation_BubbleParticipantColor" android:summary="\#FFFFFF" />
+        <ListPreference android:entries="@array/conversation_bubbleStyleList" android:title="Bubble style" android:key="conversation_bubbleStyle" android:summary="Select your favorite bubble" android:defaultValue="0" android:entryValues="@array/conversation_bubbleStyleListValues" />
+        <ListPreference android:entries="@array/conversation_bubbleTickStyleList" android:title="Ticks style" android:key="conversation_bubbleTickStyle" android:summary="Select your favorite ticks" android:defaultValue="0" android:entryValues="@array/conversation_bubbleTickStyleListValues" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Privacy" android:key="privacy_section">
+        <tk.brianvalente.whatsappmd.SwitchPref android:icon="@null" android:title="Hide Online" android:key="privacy_hideOnline" android:summary="Your status won't be shown" android:defaultValue="false" />
+        <tk.brianvalente.whatsappmd.SwitchPref android:icon="@null" android:title="No 2nd tick" android:key="privacy_no2ndTick" android:summary="The receiver won't know if you've received the message" android:defaultValue="false" />
+        <tk.brianvalente.whatsappmd.SwitchPref android:icon="@null" android:title="No blue tick" android:key="privacy_noBlueTick" android:summary="The receiver won't know if you've read the message" android:defaultValue="false" />
+        <tk.brianvalente.whatsappmd.SwitchPref android:icon="@null" android:title="Hide typing" android:key="privacy_hideTyping" android:summary="The receiver won't know if you're typing" android:defaultValue="false" />
+        <tk.brianvalente.whatsappmd.SwitchPref android:icon="@null" android:title="Always online" android:key="privacy_alwaysOnline" android:summary="But don't close the app from recents!" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Others">
+        <tk.brianvalente.whatsappmd.SwitchPref android:icon="@null" android:title="Disable color picker" android:key="others_noColorPicker" android:summary="Use HEX codes" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="About" android:key="conversation_section">
+        <Preference android:icon="@null" android:title="WhatsAppMD vFinal" android:summary="WhatsApp 2.12.166" />
+        <Preference android:icon="@null" android:title="Created by Izzat Ameir" android:summary="Open Google+ Profile">
+            <intent android:action="android.intent.action.VIEW" android:data="https://plus.google.com/+zamzameir" />
+        </Preference>
+        <Preference android:icon="@null" android:title="Private Release For" android:summary="Fvvms" />
+    </PreferenceCategory>
+</PreferenceScreen>
